@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shopping dos Carros 24H ONLINE — conectando compradores, vendedores e lojas parceiras.">
+<title>Shopping dos Carros 24H ONLINE</title>
+<style>
+:root{--navy:#092d50;--blue:#075da8;--red:#d62828;--gold:#f4b400;--ink:#20252b;--muted:#66717d;--bg:#f3f5f7;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:inherit;text-decoration:none}.topbar{background:#071d32;color:#fff;font-size:13px;padding:9px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{background:#fff;box-shadow:0 2px 10px #00000012;position:sticky;top:0;z-index:5}
+.nav{max-width:1200px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:900;font-size:25px;line-height:1;color:var(--navy);letter-spacing:-1px}.logo span{color:var(--red)}.logo small{display:block;font-size:10px;letter-spacing:3px;color:#66717d;margin-top:5px}
+nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-weight:700;font-size:13px}nav a:hover{color:var(--red)}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:12px 17px;border-radius:5px;font-weight:800;border:0;cursor:pointer}
+.hero{background:linear-gradient(105deg,#075da8 0%,#06447d 54%,#e9eef3 54%,#d8e0e8 100%);color:#fff;overflow:hidden}
+.hero-inner{max-width:1200px;margin:auto;min-height:300px;padding:48px 22px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:25px}
+.hero h1{font-size:clamp(34px,5vw,58px);line-height:.98;margin:0 0 16px;text-transform:uppercase}.hero h1 em{color:var(--gold);font-style:normal}.hero p{font-size:18px;line-height:1.45;max-width:500px}.hero-art{height:240px;display:flex;align-items:center;justify-content:center;font-size:110px;filter:drop-shadow(0 15px 12px #0004)}
+.brandstrip{background:#384653;color:white;display:flex;justify-content:center;gap:30px;flex-wrap:wrap;padding:14px;font-weight:800;font-size:14px}
+.container{max-width:1200px;margin:auto;padding:35px 22px}.section-title{text-align:center;margin:0 0 8px;font-size:25px;text-transform:uppercase}.section-sub{text-align:center;color:var(--muted);margin:0 0 25px;font-size:13px}.underline{height:3px;width:210px;background:var(--blue);margin:0 auto 26px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.car{background:white;border:1px solid #e1e5e9;padding:9px;text-align:center;box-shadow:0 2px 7px #00000008}
+.car-photo{height:135px;background:linear-gradient(135deg,#e9edf1,#cbd3dc);display:flex;align-items:center;justify-content:center;font-size:54px;color:#74808b}
+.car .km{color:var(--blue);font-weight:800;font-size:12px;margin:9px 0}.car h3{font-size:12px;min-height:30px;margin:5px 0 10px}.price{background:var(--blue);color:#fff;font-weight:900;padding:9px;margin:0 -9px -9px}
+.actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:22px 0}.outline{background:white;color:var(--blue);border:1px solid var(--blue);padding:10px 15px;border-radius:5px;font-weight:800;cursor:pointer}
+.partner-area{background:#fff}.partners{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.partner{background:#f7f9fb;border:1px solid #e0e5ea;border-radius:5px;padding:16px 12px;text-align:center;min-height:94px;display:flex;flex-direction:column;justify-content:center;gap:7px}
+.partner strong{color:var(--navy);font-size:14px}.partner small{color:var(--muted);font-size:11px}.partner a{font-size:11px;color:var(--blue);font-weight:800}
+.benefits{background:linear-gradient(110deg,#075da8,#0b477b);color:white}.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center}.benefit .ico{font-size:36px}.benefit h3{font-size:16px;margin:8px 0}.benefit p{font-size:12px;line-height:1.5;color:#e2edf8}
+.cta{background:#fff;text-align:center;padding:32px 20px}.cta h2{margin:0 0 10px}.cta p{color:var(--muted)}
+footer{background:#24282d;color:#d8dde2;padding:35px 22px}.foot{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:35px}.foot h3{font-size:13px;color:white}.foot p,.foot a{font-size:12px;line-height:1.7;color:#b9c0c7}.copyright{text-align:center;color:#87919a;border-top:1px solid #3b4148;padding-top:17px;margin-top:25px;font-size:11px}
+.whatsapp{position:fixed;right:18px;bottom:18px;background:#19b85a;color:#fff;border-radius:50px;padding:14px 18px;font-weight:900;box-shadow:0 5px 15px #0003;z-index:8}
+.admin-toggle{position:fixed;left:12px;bottom:12px;background:#263746;color:#fff;border:0;padding:9px 12px;border-radius:4px;font-size:11px;opacity:.75;cursor:pointer}
+#admin{display:none;background:#fff;border:2px solid var(--blue);padding:18px;border-radius:8px;margin:20px auto;max-width:900px}
+#admin input{padding:10px;border:1px solid #ccd3da;border-radius:4px;width:100%;margin:5px 0 10px}
+.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.note{background:#fff8df;border-left:4px solid var(--gold);padding:12px;font-size:12px;line-height:1.5;margin-top:14px}
+@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.partners{grid-template-columns:repeat(3,1fr)}.hero-inner{grid-template-columns:1fr}.hero-art{height:130px;font-size:80px}.benefit-grid{grid-template-columns:repeat(2,1fr)}nav{gap:10px}.foot{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.topbar{justify-content:center;text-align:center}.nav{align-items:flex-start;flex-direction:column}.hero-inner{padding:35px 20px}.cards{gap:8px}.car-photo{height:105px}.partners{grid-template-columns:repeat(2,1fr)}.benefit-grid{gap:12px}.foot{grid-template-columns:1fr}.whatsapp{right:10px;bottom:10px}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>📍 Rio de Janeiro e Grande Rio</span><span>🚘 O shopping automotivo que conecta oportunidades — 24 horas online</span></div>
+<header><div class="nav">
+<a class="logo" href="#">SHOPPING <span>DOS CARROS</span><small>24H ONLINE</small></a>
+<nav><a href="#inicio">Início</a><a href="#estoque">Veículos</a><a href="#lojas">Lojas parceiras</a><a href="#consignacao">Venda seu carro</a><a href="#contato">Contato</a></nav>
+<a class="btn" href="https://wa.me/5521983015906" target="_blank">Fale conosco</a>
+</div></header>
+<section class="hero" id="inicio"><div class="hero-inner">
+<div><h1>Seu próximo carro<br><em>está aqui!</em></h1><p>Encontre oportunidades, compare veículos e conecte-se com lojas parceiras. Compra, venda e consignação em um só lugar.</p><a class="btn" href="#estoque">Explorar veículos</a></div>
+<div class="hero-art" aria-label="Ilustração de automóvel">🚘</div>
+</div></section>
+<div class="brandstrip"><span>CHEVROLET</span><span>FIAT</span><span>VOLKSWAGEN</span><span>TOYOTA</span><span>HONDA</span><span>HYUNDAI</span><span>RENAULT</span><span>JEEP</span></div>
+<section class="container" id="estoque"><h2 class="section-title">Oportunidades em destaque</h2><p class="section-sub">Veículos anunciados por parceiros — confirme disponibilidade e condições com o anunciante.</p><div class="underline"></div>
+<div class="cards" id="carCards">
+<div class="car"><div class="car-photo">🚗</div><div class="km">OPORTUNIDADE</div><h3>Veículo em destaque</h3><div class="price">Consulte a loja</div></div>
+<div class="car"><div class="car-photo">🚙</div><div class="km">OPORTUNIDADE</div><h3>Veículo em destaque</h3><div class="price">Consulte a loja</div></div>
+<div class="car"><div class="car-photo">🚘</div><div class="km">OPORTUNIDADE</div><h3>Veículo em destaque</h3><div class="price">Consulte a loja</div></div>
+<div class="car"><div class="car-photo">🚐</div><div class="km">OPORTUNIDADE</div><h3>Veículo em destaque</h3><div class="price">Consulte a loja</div></div>
+</div>
+<div class="actions"><a class="outline" href="#lojas">Ver lojas parceiras</a><a class="btn" href="https://wa.me/5521983015906?text=Olá!%20Quero%20anunciar%20um%20veículo%20no%20Shopping%20dos%20Carros." target="_blank">Quero anunciar meu carro</a></div>
+</section>
+<section class="partner-area container" id="lojas"><h2 class="section-title">Nossas lojas parceiras</h2><p class="section-sub">Uma rede de até 50 lojas parceiras em um só shopping automotivo digital.</p><div class="underline"></div><div class="partners" id="partnerGrid"></div>
+<div class="note"><strong>Área de parceiros:</strong> os espaços abaixo são reservados para cadastro das 50 lojas. Os nomes e links reais deverão ser fornecidos ou autorizados por cada loja antes da publicação.</div>
+</section>
+<section class="benefits"><div class="container"><div class="benefit-grid">
+<div class="benefit"><div class="ico">🔎</div><h3>Mais opções</h3><p>Encontre diferentes marcas e modelos em um só lugar.</p></div>
+<div class="benefit"><div class="ico">🤝</div><h3>Conexões</h3><p>Contato direto com lojas e profissionais parceiros.</p></div>
+<div class="benefit"><div class="ico">📲</div><h3>Atendimento fácil</h3><p>Converse com o anunciante e tire suas dúvidas.</p></div>
+<div class="benefit"><div class="ico">🛡️</div><h3>Transparência</h3><p>Confirme histórico, documentação, laudo e condições antes de fechar negócio.</p></div>
+</div></div></section>
+<section class="cta" id="consignacao"><h2>Quer vender seu veículo?</h2><p>Divulgue seu automóvel através da rede Shopping dos Carros.</p><a class="btn" href="https://wa.me/5521983015906?text=Olá!%20Quero%20saber%20como%20anunciar%20meu%20carro%20ou%20colocar%20em%20consignação." target="_blank">Anunciar ou consignar</a></section>
+<footer id="contato"><div class="foot">
+<div><h3>SHOPPING DOS CARROS 24H ONLINE</h3><p>Um ambiente digital para aproximar compradores, vendedores, lojistas e profissionais do mercado automotivo.</p></div>
+<div><h3>MAPA DO SITE</h3><p><a href="#inicio">Início</a><br><a href="#estoque">Veículos</a><br><a href="#lojas">Lojas parceiras</a><br><a href="#consignacao">Venda seu carro</a></p></div>
+<div><h3>CONTATO</h3><p>Vitor Gomes — Idealizador<br>Rio de Janeiro e Grande Rio<br>WhatsApp: (21) 98301-5906</p><a href="https://wa.me/5521983015906" target="_blank">Fale pelo WhatsApp</a></div>
+</div><div class="copyright">© 2026 Shopping dos Carros 24H ONLINE. Todos os direitos reservados.</div></footer>
+<a class="whatsapp" href="https://wa.me/5521983015906" target="_blank">WhatsApp</a>
+<button class="admin-toggle" onclick="toggleAdmin()">Área administrativa</button>
+<div id="admin"><h2>Cadastro de lojas parceiras (até 50)</h2><p>Preencha os dados e salve. Esta versão guarda os dados somente neste navegador.</p>
+<div class="admin-grid"><label>Nome da loja<input id="storeName" placeholder="Ex.: Loja Parceira"></label><label>Link do site ou catálogo<input id="storeUrl" placeholder="https://..."></label></div>
+<button class="btn" onclick="addStore()">Adicionar loja</button> <button class="outline" onclick="exportStores()">Exportar cadastro (JSON)</button>
+<div class="note">Importante: o cadastro local não atualiza automaticamente o site público para outros visitantes. Para publicar alterações, é necessário atualizar os dados do site e enviar uma nova versão à hospedagem.</div></div>
+<script>
+const KEY='sdc24_stores_v1';
+function getStores(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}}
+function renderStores(){const grid=document.getElementById('partnerGrid');grid.innerHTML='';const stores=getStores();for(let i=0;i<50;i++){const s=stores[i];const d=document.createElement('div');d.className='partner';if(s){const name=document.createElement('strong');name.textContent=s.name;const small=document.createElement('small');small.textContent='Loja parceira Shopping dos Carros';d.append(name,small);if(s.url){const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener';a.textContent='Visitar loja';d.append(a)}}else{const strong=document.createElement('strong');strong.textContent='Loja parceira '+String(i+1).padStart(2,'0');const small=document.createElement('small');small.textContent='Espaço disponível';d.append(strong,small)}grid.append(d)}}
+function addStore(){const name=document.getElementById('storeName').value.trim();let url=document.getElementById('storeUrl').value.trim();if(!name){alert('Informe o nome da loja.');return}if(url&&!/^https?:\\/\\//i.test(url)){alert('O link deve começar com https:// ou http://');return}const stores=getStores();if(stores.length>=50){alert('Limite de 50 lojas atingido.');return}stores.push({name,url});localStorage.setItem(KEY,JSON.stringify(stores));document.getElementById('storeName').value='';document.getElementById('storeUrl').value='';renderStores();alert('Loja adicionada neste navegador. Para aparecer no site público, publique a atualização.')}
+function exportStores(){const blob=new Blob([JSON.stringify(getStores(),null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='lojas-shopping-dos-carros.json';a.click();URL.revokeObjectURL(a.href)}
+function toggleAdmin(){const el=document.getElementById('admin');el.style.display=el.style.display==='block'?'none':'block';if(el.style.display==='block')el.scrollIntoView({behavior:'smooth'})}
+renderStores();
+</script>
+</body></html>
